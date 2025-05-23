@@ -24,8 +24,8 @@ const vector<BikeInfo>& RentedBikeCollection::GetBikeList(){
 	cachedList.clear();
 	for (int i = 0; i < rentedBike.size(); i++) {
 		cachedList.push_back({
-			rentedBike[i]->get_bike_id(), 
-			rentedBike[i]->get_bike_name() 
+			rentedBike[i]->get_bike_id(),
+			rentedBike[i]->get_bike_name()
 		});
 	}
 	return cachedList;

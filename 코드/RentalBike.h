@@ -7,6 +7,7 @@
 #include "User.h"
 using namespace std;
 
+// 자전거 대여 control 클래스
 class RentalBike {
 private:
 	RentalStation* rentalStation;	// RentalStation 클래스 객체 레퍼런스

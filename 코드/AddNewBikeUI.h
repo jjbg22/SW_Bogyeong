@@ -8,6 +8,7 @@ using namespace std;
 extern ofstream out_fp;
 extern ifstream in_fp;
 
+// 자전거 등록 boundary 클래스
 class AddNewBikeUI {
 private:
 	AddNewBike* addNewBike;		// 자전거 등록 control 클래스 레퍼런스

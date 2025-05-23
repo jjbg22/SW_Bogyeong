@@ -1,10 +1,24 @@
 #include <iostream>
+#include <algorithm>
 #include "RentalInfoUI.h"
 using namespace std;
 
 // 변수 선언
 extern ofstream out_fp;
 extern ifstream in_fp;
+
+
+// 자전거 정렬 리스트 전용 전역 함수
+/*
+	함수 이름 : SortBikeById
+	기능	  : 자전거 ID를 비교해 순서대로 정렬
+	전달 인자 : bool compareById(const BikeInfo& a, const BikeInfo& b : 아이디 크기를 비교할 BikeInfo 리스트들
+	반환값    : bool -> a가 b보다 빠르면(ID순) : true, 느리면 : false
+*/
+bool SortBikeById(const BikeInfo& a, const BikeInfo& b) {
+	return a.bikeId < b.bikeId;
+}
+
 
 /*
 	함수 이름 : RentalInfoUI::ShowRentedBike
@@ -13,11 +27,15 @@ extern ifstream in_fp;
 	반환값    : 없음
 */
 void RentalInfoUI::ShowRentedBike(const vector<BikeInfo>& cachedList) {
+
+	vector<BikeInfo> sortedList = cachedList;
+	sort(sortedList.begin(), sortedList.end(), SortBikeById);
+	
 	vector<BikeInfo>::const_iterator it;
 
 	out_fp << "5.1. 자전거 대여 리스트" << endl;
 
-	for (it = cachedList.begin(); it != cachedList.end(); it++)
+	for (it = sortedList.begin(); it != sortedList.end(); it++)
 		out_fp << "> " << it->bikeId << " " << it->bikeName << endl;
 
 	out_fp << endl;

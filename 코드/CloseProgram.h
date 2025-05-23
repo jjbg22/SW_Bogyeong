@@ -6,6 +6,7 @@
 #include "User.h"
 using namespace std;
 
+// 프로그램 종료 control 클래스
 class CloseProgram {
 private:
 	CloseProgramUI* closeProgramUI;	// 프로그램 종료 boundary 클래스 레퍼런스

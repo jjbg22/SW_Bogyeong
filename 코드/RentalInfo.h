@@ -6,6 +6,7 @@
 #include "User.h"
 using namespace std;
 
+// 자전거 대여 리스트 control 클래스
 class RentalInfo {
 private:
 	RentalInfoUI* rentalInfoUI;		// 자전거 대여 리스트 boundary 클래스 레퍼런스

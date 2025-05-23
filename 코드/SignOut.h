@@ -4,6 +4,7 @@
 #include "User.h"
 using namespace std;
 
+// 로그아웃 control 클래스
 class SignOut {
 private:
 	SignOutUI* signOutUI;	// 로그아웃 boundary 클래스 레퍼런스

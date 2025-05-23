@@ -25,6 +25,13 @@ using namespace std;
 extern ofstream out_fp;
 extern ifstream in_fp;
 
+
+/*
+    함수 이름 : doTask
+    기능	  : 사용자가 입력한 파일을 읽어 메뉴 수행, 파일에 결과 출력
+    전달 인자 : 없음
+    반환값    : 없음
+*/
 void doTask()
 {
     // 메뉴 파싱을 위한 level 구분을 위한 변수

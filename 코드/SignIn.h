@@ -4,6 +4,7 @@
 #include "User.h"
 using namespace std;
 
+// 로그인 control 클래스
 class SignIn {
 private:
 	Membership* membership;	// Membership 클래스 객체 레퍼런스

@@ -8,6 +8,7 @@ using namespace std;
 extern ofstream out_fp;
 extern ifstream in_fp;
 
+// 회원가입 boundary 클래스
 class SignUpUI {
 private:
 	SignUp* signUp;				// 회원가입 control 클래스 레퍼런스

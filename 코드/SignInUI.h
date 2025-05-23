@@ -8,6 +8,7 @@ using namespace std;
 extern ofstream out_fp;
 extern ifstream in_fp;
 
+// 로그인 boundary 클래스
 class SignInUI {
 	SignIn* signIn;			// 로그인 control 클래스 레퍼런스
 	string user_id;			// 사용자 ID

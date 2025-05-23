@@ -3,6 +3,16 @@
 using namespace std;
 
 /*
+	함수 이름 : Membership::Membership
+	기능	  : Membership 생성자
+	전달 인자 : Administrator* registeredAdmin : Administrator 클래스 객체 레퍼런스
+	반환값    : 없음
+*/
+Membership::Membership(Administrator* registeredAdmin)
+	: registeredAdmin(registeredAdmin) {}
+
+
+/*
 	함수 이름 : Membership::AddNewClient
 	기능	  : clientCollection.AddClient()를 호출해 새로 가입한 회원을 추가
 	전달 인자 : string client_id : 회원 ID
@@ -10,7 +20,7 @@ using namespace std;
 				string client_phone_num : 회원 전화번호
 	반환값    : 없음
 */
-void Membership::AddNewClient(string client_id, string client_password, int client_phone_num) {
+void Membership::AddNewClient(string client_id, string client_password, string client_phone_num) {
 	clientCollection.AddClient(client_id, client_password, client_phone_num);
 }
 

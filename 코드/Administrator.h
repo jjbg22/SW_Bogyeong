@@ -9,5 +9,7 @@ private:
 	string admin_password;	// 관리자 비밀번호
 
 public:
+	Administrator() {}
+	Administrator(string admin_id, string admin_password);
 	bool CheckAdminID(string user_id, string user_password);
 };

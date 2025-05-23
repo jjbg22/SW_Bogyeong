@@ -13,6 +13,9 @@ extern ifstream in_fp;
 	반환값    : 없음
 */
 void SignOutUI::CompleteSignOut(string user_id) {
+
 	out_fp << "2.2. 로그아웃" << endl;
 	out_fp << "> " << user_id << endl;
+	out_fp << endl;
+
 }

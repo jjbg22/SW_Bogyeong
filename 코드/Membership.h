@@ -11,7 +11,9 @@ private:
 	ClientCollection clientCollection;
 
 public:
-	void AddNewClient(string client_id, string client_password, int client_phone_num);
+	Membership() {}
+	Membership(Administrator* registeredAdmin);
+	void AddNewClient(string client_id, string client_password, string client_phone_num);
 	string CheckValidMember(string user_id, string user_password);
 	Client* FindClientUser(string user_id);
 	void DeleteAllMember();

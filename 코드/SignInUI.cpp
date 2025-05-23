@@ -23,7 +23,7 @@ void SignInUI::CompleteSignIn() {
 
 	signIn->CheckSignIn(user_id, user_password);
 
-	out_fp << endl;
 	out_fp << "2.1. ·Î±×ÀÎ" << endl;
 	out_fp << "> " << user_id << " " << user_password << endl;
+	out_fp << endl;
 }

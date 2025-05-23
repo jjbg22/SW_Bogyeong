@@ -13,5 +13,5 @@ public:
 	SignOut() {}
 	SignOut(User* user);
 	void set_signOutUI(SignOutUI* signOutUI);
-	void ExcuteSignOut();
+	void ExecuteSignOut();
 };

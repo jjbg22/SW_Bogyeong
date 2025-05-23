@@ -24,12 +24,12 @@ void SignOut::set_signOutUI(SignOutUI* signOutUI) {
 
 
 /*
-	함수 이름 : SignOut::ExcuteSignOut
+	함수 이름 : SignOut::ExecuteSignOut
 	기능	  : 로그아웃 -> user의 ID를 반환 받고, user의 ID, 비밀번호, status를 모두 ""로 초기화
 	전달 인자 : 없음
 	반환값    : 없음
 */
-void SignOut::ExcuteSignOut() {
+void SignOut::ExecuteSignOut() {
 	string user_id;
 	user_id = user->get_user_id();
 	user->set_user_id("");

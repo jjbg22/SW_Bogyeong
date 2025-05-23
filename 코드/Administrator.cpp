@@ -1,6 +1,16 @@
 #include <iostream>
 #include "Administrator.h"
 
+/*
+	함수 이름 : Administrator::Administrator
+	기능	  : Administrator 생성자
+	전달 인자 : string admin_id : 관리자 ID
+				string admin_password : 관리자 비밀번호
+	반환값    : 없음
+*/
+Administrator::Administrator(string admin_id, string admin_password)
+	: admin_id(admin_id), admin_password(admin_password) {}
+
 
 /*
 	함수 이름 : Administrator::CheckAdminID

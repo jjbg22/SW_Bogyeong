@@ -20,6 +20,6 @@ SignUp::SignUp(Membership* membership)
 				string client_phone_num : 회원 전화번호
 	반환값    : 없음
 */
-void SignUp::AddNewMember(string client_id, string client_password, int client_phone_num) {
+void SignUp::AddNewMember(string client_id, string client_password, string client_phone_num) {
 	membership->AddNewClient(client_id, client_password, client_phone_num);
 }

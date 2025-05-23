@@ -23,7 +23,7 @@ void SignUpUI::CompleteSignUp(){
 
 	signUp->AddNewMember(client_id, client_password, client_phone_num);
 
-	out_fp << endl;
 	out_fp << "1.1. 회원가입" << endl;
 	out_fp << "> " << client_id << " " << client_password << " " << client_phone_num << endl;
+	out_fp << endl;
 }

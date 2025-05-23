@@ -8,7 +8,7 @@ using namespace std;
 class RentedBikeCollection {
 private:
 	vector<Bike*> rentedBike;		// 대여한 자전거 참조 리스트
-	vector<BikeInfo> cachedList;	// {자전거 ID, 자전거 이름} 리스트
+	vector<BikeInfo> cachedList;	// {자전거 ID, 자전거 제품명} 리스트
 
 public:
 	void AddBike(Bike* bike);

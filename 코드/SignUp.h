@@ -10,5 +10,5 @@ private:
 public:
 	SignUp() {}
 	SignUp(Membership* membership);
-	void AddNewMember(string client_id, string client_password, int client_phone_num);
+	void AddNewMember(string client_id, string client_password, string client_phone_num);
 };

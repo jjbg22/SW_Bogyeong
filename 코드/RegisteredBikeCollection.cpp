@@ -7,7 +7,7 @@ using namespace std;
 	함수 이름 : RentedBikeCollection::AddBike
 	기능	  : 관리자가 등록한 자전거를 자전거 목록에 추가
 	전달 인자 : string bike_id : 자전거 ID
-				string bike_name : 자전거 이름
+				string bike_name : 자전거 제품명
 	반환값    : 없음
 */
 void RegisteredBikeCollection::AddBike(string bike_id, string bike_name) {
@@ -42,7 +42,7 @@ Bike* RegisteredBikeCollection::FindBike(string bike_id) {
 void RegisteredBikeCollection::DeleteAllBike() {
 	vector<Bike*>::iterator it;
 
-	for (it = registeredBike.begin(); it != registeredBike.end(); it++) {
+	for (it = registeredBike.begin(); it != registeredBike.end();) {
 		delete* it;
 		it = registeredBike.erase(it);
 	}

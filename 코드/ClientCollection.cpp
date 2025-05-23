@@ -11,7 +11,7 @@ using namespace std;
 				string client_phone_num : 회원 전화번호
 	반환값    : 없음
 */
-void ClientCollection::AddClient(string client_id, string client_password, int client_phone_num) {
+void ClientCollection::AddClient(string client_id, string client_password, string client_phone_num) {
 	Client* newClient = new Client(client_id, client_password, client_phone_num);
 	registeredClient.push_back(newClient);
 }
@@ -65,7 +65,7 @@ Client* ClientCollection::GetClient(string user_id) {
 void ClientCollection::DeleteAllClient(){
 	vector<Client*>::iterator it;
 
-	for (it = registeredClient.begin(); it != registeredClient.end(); it++) {
+	for (it = registeredClient.begin(); it != registeredClient.end();) {
 		delete *it;
 		it = registeredClient.erase(it);
 	}

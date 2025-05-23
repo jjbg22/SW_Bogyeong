@@ -5,7 +5,7 @@ using namespace std;
 // BikeInfo structure 정의
 typedef struct bikeInfo{
     string bikeId;             // 자전거 ID
-    string bikeName;           // 자전거 이름                                         
+    string bikeName;           // 자전거 제품명                                         
 } BikeInfo;
 
 
@@ -13,7 +13,7 @@ typedef struct bikeInfo{
 class Bike {
 private:
     string bike_id;         // 자전거 ID
-    string bike_name;       // 자전거 이름
+    string bike_name;       // 자전거 제품명
 
 public:
     Bike() {}

@@ -9,7 +9,7 @@
 				string client_phone_num : 회원 전화번호
 	반환값    : 없음
 */
-Client::Client(string client_id, string client_password, int client_phone_num)
+Client::Client(string client_id, string client_password, string client_phone_num)
 	: client_id(client_id), client_password(client_password), client_phone_num(client_phone_num) {}
 
 
@@ -28,7 +28,7 @@ void Client::AddRentedBike(Bike* bike) {
 	함수 이름 : Client::ListRentedBike
 	기능	  : rentedBikeCollection::GetBikeList를 호출해 회원이 대여한 자전거 리스트를 반환
 	전달 인자 : 없음
-	반환값    : vector<BikeInfo>& -> {대여한 자전거 ID, 대여한 자전거 이름} 리스트
+	반환값    : vector<BikeInfo>& -> {대여한 자전거 ID, 대여한 자전거 제품명} 리스트
 */
 const vector<BikeInfo>& Client::ListRentedBike() {
 	return rentedBikeCollection.GetBikeList();

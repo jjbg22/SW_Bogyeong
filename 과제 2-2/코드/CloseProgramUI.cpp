@@ -2,9 +2,15 @@
 #include "CloseProgramUI.h"
 using namespace std;
 
-// 변수 선언
-extern ofstream out_fp;
-extern ifstream in_fp;
+/*
+	함수 이름 : CloseProgramUI::CloseProgramUI
+	기능	  : CloseProgramUI 생성자
+	전달 인자 : ofstream& out_fp    : 시스템 출력 파일
+	반환값    : 없음
+*/
+CloseProgramUI::CloseProgramUI(ofstream& out_fp)
+	: out_fp(out_fp) {}
+
 
 /*
 	함수 이름 : CloseProgramUI::CompleteClose

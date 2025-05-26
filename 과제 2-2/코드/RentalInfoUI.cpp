@@ -3,9 +3,14 @@
 #include "RentalInfoUI.h"
 using namespace std;
 
-// 변수 선언
-extern ofstream out_fp;
-extern ifstream in_fp;
+/*
+	함수 이름 : RentalInfoUI::RentalInfoUI
+	기능	  : RentalInfoUI 생성자
+	전달 인자 : ofstream& out_fp    : 시스템 출력 파일
+	반환값    : 없음
+*/
+RentalInfoUI::RentalInfoUI(ofstream& out_fp)
+	: out_fp(out_fp) {}
 
 
 // 자전거 정렬 리스트 전용 전역 함수

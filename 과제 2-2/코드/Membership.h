@@ -7,8 +7,8 @@ using namespace std;
 // 등록된 사용자(회원, 관리자)를 관리하는 Membership 클래스 정의
 class Membership {
 private:
-	Administrator* registeredAdmin;
-	ClientCollection clientCollection;
+	Administrator* registeredAdmin;		// Adiministrator 클래스 객체 레퍼런스
+	ClientCollection clientCollection;	// clientCollection 클래스 객체
 
 public:
 	Membership() {}

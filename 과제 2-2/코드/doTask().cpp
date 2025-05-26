@@ -21,18 +21,15 @@
 #include "Administrator.h"
 using namespace std;
 
-// 변수 선언
-extern ofstream out_fp;
-extern ifstream in_fp;
-
 
 /*
     함수 이름 : doTask
     기능	  : 사용자가 입력한 파일을 읽어 메뉴 수행, 파일에 결과 출력
-    전달 인자 : 없음
+    전달 인자 : ifstream& in_fp     : 사용자 입력 파일
+                ofstream& out_fp    : 시스템 출력 파일
     반환값    : 없음
 */
-void doTask()
+void doTask(ifstream& in_fp, ofstream& out_fp)
 {
     // 메뉴 파싱을 위한 level 구분을 위한 변수
     int menu_level_1 = 0, menu_level_2 = 0;
@@ -61,7 +58,7 @@ void doTask()
                 case 1:     // "1.1. 회원가입" 메뉴 부분
                 {
                     SignUp* startSignUP = new SignUp(membership);
-                    SignUpUI* startSignUpUI = new SignUpUI(startSignUP);
+                    SignUpUI* startSignUpUI = new SignUpUI(startSignUP, in_fp, out_fp);
                     startSignUpUI->CompleteSignUp();
                     delete startSignUP;
                     delete startSignUpUI;
@@ -77,7 +74,7 @@ void doTask()
                 case 1:     // "2.1. 로그인" 메뉴 부분
                 {
                     SignIn* startSignIn = new SignIn(membership, user);
-                    SignInUI* startSignInUI = new SignInUI(startSignIn);
+                    SignInUI* startSignInUI = new SignInUI(startSignIn, in_fp, out_fp);
                     startSignInUI->CompleteSignIn();
                     delete startSignIn;
                     delete startSignInUI;
@@ -86,7 +83,7 @@ void doTask()
                 case 2:     // "2.2. 로그아웃" 메뉴 부분
                 {
                     SignOut* startSignOut = new SignOut(user);
-                    SignOutUI* startSignOutUI = new SignOutUI();
+                    SignOutUI* startSignOutUI = new SignOutUI(out_fp);
                     startSignOut->set_signOutUI(startSignOutUI);
                     startSignOut->ExecuteSignOut();
                     delete startSignOut;
@@ -103,7 +100,7 @@ void doTask()
                 case 1:     // "3.1. 자전거 등록" 메뉴 부분
                 {
                     AddNewBike* startAddNewBike = new AddNewBike(rentalStation, user);
-                    AddNewBikeUI* startAddNewBikeUI = new AddNewBikeUI(startAddNewBike);
+                    AddNewBikeUI* startAddNewBikeUI = new AddNewBikeUI(startAddNewBike, in_fp, out_fp);
                     startAddNewBikeUI->RegisterNewBike();
                     delete startAddNewBike;
                     delete startAddNewBikeUI;
@@ -119,7 +116,7 @@ void doTask()
                 case 1:     // "4.1. 자전거 대여" 메뉴 부분
                 {
                     RentalBike* startRentalBike = new RentalBike(rentalStation, membership, user);
-                    RentalBikeUI* startRentalBikeUI = new RentalBikeUI(startRentalBike);
+                    RentalBikeUI* startRentalBikeUI = new RentalBikeUI(startRentalBike, in_fp, out_fp);
                     startRentalBikeUI->RequestRental();
                     delete startRentalBike;
                     delete startRentalBikeUI;
@@ -135,7 +132,7 @@ void doTask()
                 case 1:     // "5.1. 자전거 대여 리스트" 메뉴 부분
                 {
                     RentalInfo* startRentalInfo = new RentalInfo(membership, user);
-                    RentalInfoUI* startRentalInfoUI = new RentalInfoUI();
+                    RentalInfoUI* startRentalInfoUI = new RentalInfoUI(out_fp);
                     startRentalInfo->set_rentalInfoUI(startRentalInfoUI);
                     startRentalInfo->ShowRentalInfo();
                     delete startRentalInfo;
@@ -152,7 +149,7 @@ void doTask()
                     case 1:   // "6.1. 종료“ 메뉴 부분
                     {
                         CloseProgram* startCloseProgram = new CloseProgram(rentalStation, membership, user);
-                        CloseProgramUI* startCloseProgramUI = new CloseProgramUI();
+                        CloseProgramUI* startCloseProgramUI = new CloseProgramUI(out_fp);
                         startCloseProgram->set_closeProgramUI(startCloseProgramUI);
                         startCloseProgram->ExecuteCloseProgram();
                         delete startCloseProgram;

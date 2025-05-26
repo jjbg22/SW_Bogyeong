@@ -5,11 +5,13 @@ using namespace std;
 /*
 	함수 이름 : AddNewBikeUI::AddNewBikeUI
 	기능	  : AddNewBikeUI 생성자
-	전달 인자 : AddNewBike* addNewBike : 자전거 등록 control 클래스 레퍼런스
+	전달 인자 : AddNewBike* addNewBike	: 자전거 등록 control 클래스 레퍼런스
+				ifstream& in_fp			: 사용자 입력 파일
+				ofstream& out_fp		: 시스템 출력 파일
 	반환값    : 없음
 */
-AddNewBikeUI::AddNewBikeUI(AddNewBike* addNewBike)
-	: addNewBike(addNewBike) {}
+AddNewBikeUI::AddNewBikeUI(AddNewBike* addNewBike, ifstream& in_fp, ofstream& out_fp)
+	: addNewBike(addNewBike), in_fp(in_fp), out_fp(out_fp) {}
 
 
 /*

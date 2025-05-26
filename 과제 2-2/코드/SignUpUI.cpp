@@ -6,10 +6,12 @@ using namespace std;
 	함수 이름 : SignUpUI::SignUpUI
 	기능	  : SignUpUI 생성자
 	전달 인자 : SignUp* signUp : 회원가입 control 클래스 레퍼런스
+				ifstream& in_fp     : 사용자 입력 파일
+				ofstream& out_fp    : 시스템 출력 파일
 	반환값    : 없음
 */
-SignUpUI::SignUpUI(SignUp* signUp)
-	: signUp(signUp) {}
+SignUpUI::SignUpUI(SignUp* signUp, ifstream& in_fp, ofstream& out_fp)
+	: signUp(signUp), in_fp(in_fp), out_fp(out_fp) {}
 
 
 /*
